@@ -1,11 +1,16 @@
-def make_album(musician_name,album_name,amount_track=None):
+def make_album(musician_name,album_name):
     album = {'musician': musician_name,'album': album_name}
-    if amount_track:
-        album['amount_track'] = amount_track
+
     return album
-album_info = make_album('Anacondaz','Дети и радуга')
-print(album_info)
-album_info = make_album('Король и шут','Мертвый Анархист')
-print(album_info)
-album_info = make_album('System of a down','Chop Suey!',amount_track=4)
-print(album_info)
+while True:
+    print('\nTell me your favorite musician and album')
+    print("(enter 'q' if you want to stop)")
+
+    mus_name = input("Enter musician name: ")
+    if mus_name == 'q':
+        break
+    alb_name = input("Enter album name: ")
+    if alb_name == 'q':
+        break
+    correct_name = make_album(mus_name,alb_name)
+    print(f"\nHello, your favorit musician and album is:{correct_name}")
