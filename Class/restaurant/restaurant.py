@@ -22,5 +22,5 @@ class IceCreamStand(Restaurant):
     def show_flavor(self):
         print(f"list : {self.flavors}")
 
-restaurant_0 = IceCreamStand('Sapore','Italian')
-restaurant_0.show_flavor()
+#restaurant_0 = IceCreamStand('Sapore','Italian')
+#restaurant_0.show_flavor()
