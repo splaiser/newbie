@@ -7,13 +7,18 @@ class Lottery():
 
 
     def randomiser(self):
+        score = 0
+        happy_result = [7,7,7,'e']
         result = []
-        for n in range(4):
+        while happy_result != result:
+            result = []
+            for n in range(4):
+                random = choice(self.list)
+                result.append(random)
+            score = score + 1
 
-            random = choice(self.list)
-            result.append(random)
+        print(score)
 
-        print(f"Congratulation winners with tikket {result}! ")
 
 lottery_0 = Lottery()
 lottery_0.randomiser()
