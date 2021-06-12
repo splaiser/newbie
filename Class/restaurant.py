@@ -2,7 +2,6 @@ class Restaurant():
     def __init__(self,restaurant_name,cuisine_type):
         self.name = restaurant_name
         self.type = cuisine_type
-        #self.number_served = int(self.number_served)
         self.number_served = 0
     def describe_restaurant(self):
         print(f"Welcome to {self.name}")
@@ -16,17 +15,12 @@ class Restaurant():
     def increment_number_served(self,seat):
         self.number_served += seat
 
+class IceCreamStand(Restaurant):
+    def __init__(self,restaurant_name,cuisine_type):
+        super().__init__(restaurant_name,cuisine_type)
+        self.flavors = ['chery','banana','white']
+    def show_flavor(self):
+        print(f"list : {self.flavors}")
 
-first_restaurant = Restaurant('Sapore','Italian')
-first_restaurant.show_number_served()
-first_restaurant.set_number_served(65)
-first_restaurant.show_number_served()
-first_restaurant.increment_number_served(6)
-first_restaurant.show_number_served()
-#first_restaurant.number_served()
-#first_restaurant.describe_restaurant()
-#first_restaurant.open_restaurant()
-second_restaurant = Restaurant('Y Ashota','Armenian')
-#second_restaurant.describe_restaurant()
-third_restaurant = Restaurant('Dobrinya','Russian')
-#third_restaurant.describe_restaurant()
+restaurant_0 = IceCreamStand('Sapore','Italian')
+restaurant_0.show_flavor()

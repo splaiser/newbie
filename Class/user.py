@@ -25,21 +25,12 @@ class User():
         print (f"Login attempts : {self.login_attempts}")
 
 
-user_0 = User('Nikita','Chernyavskiy','29','Rostov-On-Don')
+class Admin(User):
+    def __init__(self,first_name,last_name,age,location):
+        super().__init__(first_name,last_name,age,location)
+        self.privileges = ["can add user","can delete user", "can ban user"]
+    def show_privileges(self):
+        print(f"Admin privileges: {self.privileges}")
 
-user_0.show_login_attempts()
-user_0.increment_login_attempts()
-user_0.increment_login_attempts()
-user_0.increment_login_attempts()
-user_0.show_login_attempts()
-user_0.reset_login_attempts()
-user_0.show_login_attempts()
-
-#user_1 = User('Svetlana','Chernyavskaya','52','Rostov-On-Don')
-#user_2 = User('Katerina','Popova','21','Rostov-On-Don')
-#user_0.describe_user()
-#user_0.greet_user()
-#user_1.describe_user()
-#user_1.greet_user()
-#user_2.describe_user()
-#user_2.greet_user()
+admin_0 = Admin('Nikita','Chernyavskiy','29','Rostov-On-Don')
+admin_0.show_privileges()
