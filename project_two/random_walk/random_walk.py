@@ -28,3 +28,5 @@ class RandomWalk():
 
             self.x_values.append(x)
             self.y_values.append(y)
+
+    def get_step(self,y_step,x_step):
